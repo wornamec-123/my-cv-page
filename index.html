@@ -75,10 +75,10 @@
   <hr>
   <small>portfolio by Celestine </small>
 </div>
-  <form action="#" ></form>
+  <form action="#" >
   <label>
     Full name 
-    <input type= "name" name="fullname">
+    <input type= "text" name="fullname">
   </label>
   <label >
     Email account 
@@ -86,7 +86,24 @@
   </label>
   <label>
     Phone number 
-    <input type="number" name="phone number">
+    <input type="tel" name="phone number">
   </label>
+  <label>
+    Subject
+    <input type="text" name="subject" >
+  </label>
+    <select>
+  <option value="">Choose a course</option>
+  <option value="cs">Computer Science</option>
+  <option value="it">Information Technology</option>
+  <option value="ds">Data Science</option>
+    </select>
+    <input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="male"> Male
+    <textarea rows="5" placeholder="Write your message here..."></textarea>
+    <input type="checkbox"> I agree to be contacted 
+    <button type="submit">Send Message</button>
+    
+    
   </body>
   
