@@ -48,3 +48,30 @@ small {
   text-align: center;
   color: #999;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0f3460;
+}
+
+th {
+  background-color: #0f3460;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
