@@ -13,6 +13,10 @@ body {
   color: #222;
 
 }
+header {background-color:purple;
+       text-align:center;
+       padding-top:50px;
+       padding-bottom:50px;} 
 nav a {
   color: #0f3460;
   text-decoration: none;
@@ -32,7 +36,7 @@ h1 {
 
   font-size: 2em;
 
-  color: #1a1a2e;
+  color: #fffff;
 
   margin-bottom: 4px;
 
