@@ -76,7 +76,7 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
- img{border-radius:50%;
+figure img{border-radius:50%;
            width:150px;
            height:150px
           objext-fit:cover;
