@@ -31,15 +31,16 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+  Justify-content:center;
 }
 
 header h1 {
 
   font-size: 2em;
 
-  color: #fffff;
+  color: #ffffff;
 
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 
 }
 h2 {
