@@ -76,7 +76,14 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-
+figure img{border-radius:50%;
+           width:150px;
+           height:150px
+          objext-fit:cover;
+           border:4px;
+           display:block;
+           solid:#0f3460;
+           margin:0 auto} 
 caption {
   font-size: 1.2em;
   font-weight: bold;
