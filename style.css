@@ -135,3 +135,43 @@ button {
 button:hover {
   background-color: #16213e;
     }
+#about {
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+#education {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+}
+
+#skills {
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+#projects {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+}
+
+#hobbies {
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+#contact {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+  }
+
+#about, #skills, #hobbies {
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+
+
+#education, #projects, #contact {
+  background-color: #f2f2f2;
+  padding: 30px 20px;
+  }
