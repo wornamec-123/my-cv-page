@@ -15,8 +15,8 @@ body {
 }
 header {background-color:#0f3460;
        text-align:center;
-       padding-top:50px;
-       padding-bottom:50px;} 
+       padding-top:50px 20px;
+       padding-bottom:50px 20px;} 
 nav a {
   color:white;
   text-decoration: none;
