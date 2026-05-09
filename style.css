@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f9f9f9;
@@ -138,44 +143,48 @@ button:hover {
   background-color: #16213e;
     }
 #about {
-  background-color: #ffffff;
+  background-color: black ;
   padding: 30px 20px;
 }
 
 #education {
-  background-color: #f2f2f2;
+  background-color: black;
   padding: 30px 20px;
 }
 
 #skills {
-  background-color: #ffffff;
+  background-color: black;
   padding: 30px 20px;
 }
 
 #projects {
-  background-color: #f2f2f2;
+  background-color: black;
   padding: 30px 20px;
 }
 
 #hobbies {
-  background-color: #ffffff;
+  background-color:black;
   padding: 30px 20px;
 }
 
 #contact {
-  background-color: #f2f2f2;
-  padding: 30px 20px;
+  background-color: black ;
+  padding: 30px 20px
   }
 
 #about, #skills, #hobbies {
   background-color: #ffffff;
   padding: 30px 20px;
+  border-radius:50%;
+  box-shadow:0 2px 10px rgba(0,0,0,0. 1)
 }
 
 
 #education, #projects, #contact {
   background-color: #f2f2f2;
   padding: 30px 20px;
+  border-radius:50%;
+  box-shadow:0 2px 10px rgba(0,0,0,0. 1)
   }
 footer {
   background-color: #0f3460;
