@@ -13,6 +13,15 @@ body {
   color: #222;
 
 }
+nav a {
+  color: #0f3460;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
 
 h1 {
 
