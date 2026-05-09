@@ -19,7 +19,8 @@ main {
 
 header {background-color:#0f3460;
        text-align:center;
-       padding:40px 20px;} 
+       padding:40px 20px;
+       width:100%} 
 nav a {
   color:white;
   text-decoration: none;
