@@ -18,13 +18,14 @@ header {background-color:#0f3460;
        padding-top:50px;
        padding-bottom:50px;} 
 nav a {
-  color: #0f3460;
+  color:white;
   text-decoration: none;
   margin-right: 15px;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color:#f0a500;
 }
 nav {
   display: flex;
