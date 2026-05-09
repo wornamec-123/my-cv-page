@@ -99,11 +99,7 @@ th {
 
 td {
   padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-td, th {
-  white-space: nowrap;
-  }
+  border-bottom: 1px solid #ddd;} 
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
