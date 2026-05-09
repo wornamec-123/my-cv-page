@@ -75,6 +75,7 @@ small {
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout:fixed;
 }
 figure img{border-radius:50%;
            width:150px;
