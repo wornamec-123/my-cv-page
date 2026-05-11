@@ -166,8 +166,13 @@ button:hover {
   display: flex;
   gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
-      #galleries{grid-template-column:repeat(2,1fr)
+  flex-wrap: wrap;} 
+      #galleries{background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px; display:grid;
+                 grid-template-column:repeat(2,1fr)
               gap:100px;
                 image width:100%;}
 
