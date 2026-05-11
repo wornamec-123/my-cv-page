@@ -167,7 +167,9 @@ button:hover {
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-       #galleries:                    }
+      #galleries{grid-template-column:repeat(2,1fr)
+              gap:100px;
+                image width:100%;}
 
 
 #education, #projects, #contact{
