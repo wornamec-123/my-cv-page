@@ -16,3 +16,14 @@ function showMessage() {
 
 // 3. Connect the trigger (The Event Listener)
 btn.addEventListener("click", showMessage);
+const input = document.getElementById("levelInput");
+const btn = document.getElementById("checkBtn");
+
+btn.addEventListener("click", function() {
+    let myLevel = Number(input.value); // This 'grabs' the number from the HTML box
+    
+    if (myLevel === 100) {
+        alert("Welcome, Freshman!");
+    }
+});
+ 
