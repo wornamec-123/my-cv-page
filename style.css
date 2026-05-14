@@ -1,3 +1,4 @@
+/* --- BASE STYLES --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,13 +48,31 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 0.9em;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
   color: #f0a500;
 }
 
+/* Nav link underline animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f0a500;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --- SECTION STYLING --- */
 h2 {
   color: #16213e;
   border-left: 4px solid #0f3460;
@@ -61,26 +80,27 @@ h2 {
   margin-bottom: 15px;
 }
 
-li {
-  line-height: 2;
+section {
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-dt {
-  font-weight: bold;
-  color: #0f3460;
+section:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-dd {
-  margin-left: 20px;
-  color: #555;
+#about, #skills, #hobbies, #gallery {
+  background-color: #ffffff;
 }
 
-small {
-  display: block;
-  text-align: center;
-  color: #999;
+#education, #projects, #contact {
+  background-color: #f2f2f2;
 }
 
+/* --- CONTENT ELEMENTS --- */
 figure img {
   border-radius: 50%;
   width: 150px;
@@ -89,6 +109,12 @@ figure img {
   border: 4px solid #0f3460;
   display: block;
   margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+figure img:hover, figure img:active {
+  transform: scale(1.1);
+  border-color: #f0a500;
 }
 
 .about-content {
@@ -98,17 +124,11 @@ figure img {
   flex-wrap: wrap;
 }
 
+/* --- TABLES & LISTS --- */
 table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-}
-
-caption {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #0f3460;
 }
 
 th {
@@ -127,22 +147,7 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#about, #skills, #hobbies, #gallery {
-  background-color: #ffffff;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
-#education, #projects, #contact {
-  background-color: #f2f2f2;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
+/* --- GRIDS --- */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -152,7 +157,15 @@ tr:nth-child(even) {
 
 .gallery-grid img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover, .gallery-grid img:active {
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .projects-grid {
@@ -167,20 +180,15 @@ tr:nth-child(even) {
   padding: 15px;
   border-radius: 8px;
   border-left: 4px solid #0f3460;
+  transition: all 0.3s ease;
 }
 
-form {
-  max-width: 500px;
-  margin: 0 auto;
+.project-card:hover, .project-card:active {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
-}
-
+/* --- FORMS & BUTTONS --- */
 input, textarea, select {
   width: 100%;
   padding: 10px;
@@ -188,11 +196,6 @@ input, textarea, select {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1em;
-}
-
-input:focus, textarea:focus {
-  border-color: #0f3460;
-  outline: none;
 }
 
 button {
@@ -204,107 +207,18 @@ button {
   font-size: 1em;
   cursor: pointer;
   width: 100%;
-}
-
-button:hover {
-  background-color: #16213e;
-}
-
-footer {
-  background-color: #0f3460;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer small {
-  color: #ccc;
-  }
-  /* TASK 1 — Button hover lift effect */
-button {
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  -webkit-tap-highlight-color: transparent;
 }
 
-button:hover {
+button:hover, button:active {
   background-color: #f0a500;
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
-/* TASK 2 — Project card hover lift */
-.project-card {
-  transition: all 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* TASK 3 — Gallery image zoom */
-.gallery-grid img {
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* TASK 4 — Profile photo effect */
-figure img {
-  transition: all 0.3s ease;
-}
-
-figure img:hover {
-  transform: scale(1.1);
-  border-color: #f0a500;
-}
-
-/* TASK 5 — Nav link underline animation */
-nav a {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #f0a500;
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* TASK 6 — Page load fade in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#about { animation: fadeIn 0.5s ease 0.1s both; }
-#education { animation: fadeIn 0.5s ease 0.2s both; }
-#skills { animation: fadeIn 0.5s ease 0.3s both; }
-#projects { animation: fadeIn 0.5s ease 0.4s both; }
-#hobbies { animation: fadeIn 0.5s ease 0.5s both; }
-#gallery { animation: fadeIn 0.5s ease 0.6s both; }
-#contact { animation: fadeIn 0.5s ease 0.7s both; }
-
-/* TASK 7 — Contact links as buttons */
+/* Contact links as buttons */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -320,19 +234,43 @@ nav a:hover::after {
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.contact-links a:hover {
+.contact-links a:hover, .contact-links a:active {
   background-color: #f0a500;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Section hover effect */
-section {
-  transition: box-shadow 0.3s ease;
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-section:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  }
+#about { animation: fadeIn 0.5s ease 0.1s both; }
+#education { animation: fadeIn 0.5s ease 0.2s both; }
+#skills { animation: fadeIn 0.5s ease 0.3s both; }
+#projects { animation: fadeIn 0.5s ease 0.4s both; }
+#hobbies { animation: fadeIn 0.5s ease 0.5s both; }
+#gallery { animation: fadeIn 0.5s ease 0.6s both; }
+#contact { animation: fadeIn 0.5s ease 0.7s both; }
+
+/* --- FOOTER --- */
+footer {
+  background-color: #0f3460;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer small {
+  color: #ccc;
+}
