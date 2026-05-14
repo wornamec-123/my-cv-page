@@ -171,10 +171,15 @@ button:hover {
   padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px; display:grid;
+  margin-bottom: 20px; 
+              . gallery-grid{ display:grid;
                  grid-template-column:repeat(2,1fr)
               gap:100px;
                 image width:100%;}
+              . gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+                   }
 
 
 #education, #projects, #contact{
